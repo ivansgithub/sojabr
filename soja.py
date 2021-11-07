@@ -101,11 +101,23 @@ def submitForm():
         vv=v[:3]+','+v[3:]
         valu.append(vv)
 
-    listas=zip(dates, valu)
-    listas=list(listas)
-    lista=listas[:5]
-
- 
+  
+    if indicador=='VAR./DIA':
+        listas=zip(dates, percent)
+        listas=list(listas)
+        lista=listas[:5]
+    elif indicador=='VAR./MES':
+        listas=zip(dates, percent)
+        listas=list(listas)
+        lista=listas[:5]
+    elif indicador=='VALOR US$':
+        listas=zip(dates, valu)
+        listas=list(listas)
+        lista=listas[:5]
+    elif indicador=='VALOR R$':
+        listas=zip(dates, valu)
+        listas=list(listas)
+        lista=listas[:5]
 
   return render_template('soja2.html',values=values,labels=label_date,lista=lista,percent=percent)
 
