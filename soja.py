@@ -13,7 +13,7 @@ def submitForm():
   producto = ''
   indicador =''
   label_date=''
-
+  percent=''
   lista=''
 
 
